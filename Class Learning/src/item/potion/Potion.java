@@ -8,9 +8,9 @@ public final class Potion extends Item {
 
 	private final Quantity QT;
 	private final Rarity rar;
-	private final double value;
+	private double value;
 	private final double weight;
-	private final int health;
+	private int health;
 	
 	public Potion(Quantity qt, Rarity rar)
 	{
@@ -40,6 +40,8 @@ public final class Potion extends Item {
 	public void use() {
 		player.addHP(health);
 		System.out.println("Using potion to add "+this.getHealth()+" HP to player.");
+		health=health/2;
+		value=value/2;	
 	}
 
 	@Override

@@ -69,7 +69,8 @@ public class Main {
 		System.out.println("\nMaking a new weapon and using it");
 		Item weapon=new Weapon(Material.PLATINUM, Rarity.LEGENDARY, WeaponType.AXE);
 		try {
-		player.addItem(weapon);}
+		player.addItem(weapon);
+		}
 		catch(ClassCastException e) 
 		{
 			System.out.println("Cannot equip that as Armour!!!\n");
